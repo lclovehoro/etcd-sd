@@ -19,7 +19,8 @@ etcd数据格式：
 prometheus.yaml:
 ```
 ......
-  - job_name: 'discovery_by_etcd' # Will be overwritten by job label of target groups.
-    file_sd_configs:
-    - files: ['/targets/*.json']
+scrape_configs:
+- job_name: 'discovery_by_etcd' # Will be overwritten by job label of target groups.
+  file_sd_configs:
+  - files: ['/targets/*.json']
 ```
